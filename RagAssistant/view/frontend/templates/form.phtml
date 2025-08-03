@@ -1,0 +1,77 @@
+<?php
+/**
+ * Copyright © Sumesh. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<div class="rag-assistant-container">
+    <div class="rag-assistant-form">
+        <h2><?= $block->escapeHtml(__('RAG Assistant')) ?></h2>
+        <p><?= $block->escapeHtml(__('Ask me anything about our products and services.')) ?></p>
+        
+        <div id="chat-container" class="chat-container">
+            <div class="chat-message assistant-message">
+                <div class="message-content">
+                    <?= $block->escapeHtml(__('Hello! I\'m your RAG Assistant. Ask me anything about our products and services, and I\'ll help you find the information you need.')) ?>
+                </div>
+                <div class="message-meta">
+                    <span class="sender">Assistant</span>
+                    <span class="timestamp"><?= date('H:i') ?></span>
+                </div>
+            </div>
+        </div>
+        
+        <form id="rag-assistant-form" method="post" action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>">
+            <div class="field required">
+                <label for="question" class="label">
+                    <span><?= $block->escapeHtml(__('Your Question')) ?></span>
+                </label>
+                <div class="control">
+                    <textarea 
+                        name="question" 
+                        id="question" 
+                        class="input-text" 
+                        rows="4" 
+                        placeholder="<?= $block->escapeHtml(__('Type your question here...')) ?>"
+                        required="required"
+                    ></textarea>
+                </div>
+            </div>
+            
+            <div class="actions">
+                <button type="submit" class="action primary" id="ask-button">
+                    <span><?= $block->escapeHtml(__('Ask Question')) ?></span>
+                </button>
+            </div>
+        </form>
+        
+        <div id="rag-response" class="rag-response" style="display: none;">
+            <h3><?= $block->escapeHtml(__('Response')) ?></h3>
+            <div id="response-content" class="response-content"></div>
+            
+            <div id="response-meta" class="response-meta" style="display: none;">
+                <div class="confidence-score">
+                    <span class="label"><?= $block->escapeHtml(__('Confidence:')) ?></span>
+                    <span id="confidence-value" class="value"></span>
+                </div>
+                
+                <div id="sources-section" class="sources-section" style="display: none;">
+                    <h4><?= $block->escapeHtml(__('Sources')) ?></h4>
+                    <ul id="sources-list" class="sources-list"></ul>
+                </div>
+            </div>
+        </div>
+        
+        <div id="rag-loading" class="rag-loading" style="display: none;">
+            <p><?= $block->escapeHtml(__('Processing your question...')) ?></p>
+        </div>
+    </div>
+</div>
+
+<script type="text/x-magento-init">
+{
+    "#rag-assistant-form": {
+        "Magento_RagAssistant/js/rag-assistant": {}
+    }
+}
+</script> 

@@ -1,0 +1,23 @@
+{
+    "name": "magento/module-rag-assistant",
+    "description": "RAG Assistant module for Magento 2 by Sumesh",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "MIT"
+    ],
+    "require": {
+        "php": "~8.1.0||~8.2.0||~8.3.0",
+        "magento/framework": "103.0.*",
+        "magento/module-backend": "103.0.*",
+        "magento/module-store": "103.0.*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Magento\\RagAssistant\\": ""
+        }
+    }
+} 

@@ -1,0 +1,250 @@
+/**
+ * Copyright © Sumesh. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+.rag-assistant-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.rag-assistant-form {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rag-assistant-form h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.rag-assistant-form p {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.rag-assistant-form .field {
+    margin-bottom: 20px;
+}
+
+.rag-assistant-form .label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.rag-assistant-form .control textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 14px;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.rag-assistant-form .control textarea:focus {
+    border-color: #007bdb;
+    outline: none;
+    box-shadow: 0 0 0 1px #007bdb;
+}
+
+.rag-assistant-form .actions {
+    margin-top: 25px;
+}
+
+.rag-assistant-form .action.primary {
+    background: #007bdb;
+    border: 1px solid #007bdb;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rag-assistant-form .action.primary:hover {
+    background: #0056b3;
+    border-color: #0056b3;
+}
+
+.rag-assistant-form .action.primary:disabled {
+    background: #ccc;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+
+.rag-response {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 4px solid #007bdb;
+}
+
+.rag-response h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.response-content {
+    color: #555;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.rag-loading {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.rag-loading p {
+    color: #666;
+    margin: 0;
+    font-style: italic;
+}
+
+.response-meta {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.confidence-score {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.confidence-score .label {
+    font-weight: 600;
+    color: #333;
+    margin-right: 8px;
+}
+
+.confidence-score .value {
+    color: #007bdb;
+    font-weight: 600;
+}
+
+.sources-section {
+    margin-top: 15px;
+}
+
+.sources-section h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.sources-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sources-list li {
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    border-left: 3px solid #007bdb;
+}
+
+.sources-list a {
+    color: #007bdb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sources-list a:hover {
+    text-decoration: underline;
+}
+
+.sources-list .similarity {
+    color: #666;
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+/* Chat Interface Styles */
+.chat-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: #f8f9fa;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.chat-message {
+    margin-bottom: 15px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background: #007bdb;
+    color: #fff;
+    margin-left: auto;
+    text-align: right;
+}
+
+.assistant-message {
+    background: #fff;
+    color: #333;
+    border: 1px solid #e0e0e0;
+    margin-right: auto;
+}
+
+.message-content {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.message-meta {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.user-message .message-meta {
+    color: #fff;
+}
+
+.assistant-message .message-meta {
+    color: #666;
+}
+
+.message-meta .sender {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.message-meta .timestamp {
+    font-style: italic;
+}
+
+/* Responsive design for chat */
+@media (max-width: 768px) {
+    .chat-container {
+        max-height: 300px;
+    }
+    
+    .chat-message {
+        max-width: 90%;
+    }
+} 
